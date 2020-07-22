@@ -19,7 +19,7 @@
 
 <p>
   <label>Events</label>
-  <input id="inputEvents" type="number" placeholder="Event" oninput="Converter(this.value)" onchange="Converter(this.value)">
+  <input id="inputEvents" type="number" placeholder="Event" oninput="Events(this.value)" onchange="Events(this.value)">
 </p>
 <p>GB/M: <span id="outputUsage"></span></p>
 
@@ -33,5 +33,10 @@ function Converter(valNum) {
   document.getElementById("outputUsage").innerHTML=5*(valNum/1000000)/8;
 }
 </script>
+<script>
+  function Events(valnum) {
+    document.getElementById("outputUsage").innerHTML=5*outputGBs;
+  }
+  </script>
 </body>
 </html>

@@ -19,7 +19,7 @@
 
 <p>
   <label>Events</label>
-  <input id="inputEvents" type="number" placeholder="Event" oninput="Eventscalc(this.value, outputGbps)" onchange="Eventscalc(this.value, outputGbps)">
+  <input id="inputEvents" type="number" placeholder="Event" oninput="Eventscalc(this.value, amount)" onchange="Eventscalc(this.value, amount)">
 </p>
 <p>Event based GB/Month: <span id="outputUsage"></span></p>
 
@@ -28,6 +28,7 @@ function Converter(valNum) {
   document.getElementById("outputMbps").innerHTML=valNum/1000;
   document.getElementById("outputGbps").innerHTML=valNum/1000000;
   document.getElementById("outputGBs").innerHTML=(valNum/1000000)/8;
+  var amount=(valNum/1000000)/8
   document.getElementById("outputGBh").innerHTML=((valNum/1000000)/8)*3600;
   document.getElementById("outputGBm").innerHTML=(((valNum/1000000)/8)*3600)*730
 }

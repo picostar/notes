@@ -15,7 +15,7 @@
 <p>Gbps: <span id="outputGbps"></span></p>
 <p>GB/s: <span id="outputGBs"></span></p>
 <p>GB/h: <span id="outputGBh"></span></p>
-<p>GB/M: <span id="outputGBm"></span></p>
+<p>GB/Month: <span id="outputGBm"></span></p>
 
 <p>
   <label>Events</label>
@@ -34,7 +34,7 @@ function Converter(valNum) {
 </script>
 <script>
   function Eventscalc(events) {
-    document.getElementById("outputUsage").innerHTML=events*5;
+    document.getElementById("outputUsage").innerHTML=events*(outputGbps(60*2));
   }
   </script>
 </body>

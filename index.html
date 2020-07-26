@@ -26,9 +26,7 @@
 </p>
 
 
-<p><span id="outputUsage"></span> Minutes events = GB/Month: <span id="outputUsage"></span></p>
-
-
+<p> Event based usage  = GB/Month: <span id="outputUsage"></span></p>
 
 <script>
 
@@ -45,7 +43,7 @@ function Converter(valNum) {
   amount = (valNum/1000000)/8
 }
 
-  function Eventscalc(events, EA, mins) {
+  function Eventscalc(events, EA) {
     document.getElementById("outputUsage").innerHTML=events*(EA*(60*mins));
   }
   </script>

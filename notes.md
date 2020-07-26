@@ -11,39 +11,43 @@ Assure the device is charged
 
 send this command to read current configuration, you may need to have your terminal set to local echo, software flow control, 115200 baud
 
-cmd:rconf,1#
+    cmd:rconf,1#
 
 set the apn (ATT example), no username or password
 
-cmd:iot0119.com.attz,,#
+    cmd:iot0119.com.attz,,#
 
 read config to assure apn was set
 
-cmd:rconf,1#
+    cmd:rconf,1#
 
 set the IP and PORT of cloud application, in this case it will be traccar on azure
 
-cmd:data,13.82.224.47,5191
+    cmd:data,13.82.224.47,5191
+
+now set the protocol, it's UDP no ACK
+
+    cmd:protocol,0,0#
 
 then set the mode 
 
 for debugging while plugged into charger i use the always on mode
 
-cmd:mode,6,10#     
+    cmd:mode,6,10#     
 
 for power saving i use mode 7 and update every min, shake the device for 10 seconds and it comes alive
 
-cmd:mode,7,60#
+    cmd:mode,7,60#
 
 For debugging and reviewing logs
 
 turn log on with 
 
-cmd:logprint,1#
+    cmd:logprint,1#
 
 off with 
 
-cmd:logprint,0#
+    cmd:logprint,0#
 
 
 

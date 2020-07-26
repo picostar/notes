@@ -3,17 +3,6 @@
 <title>Kbps to GB per month Converter</title>
 <body>
 
-  p {
-    font-family: "jubilat", sans-serif;
-    font-weight: 200;
-    font-size: 1.7em;
-    line-height: 1.7em;
-    background: -webkit-linear-gradient(-90deg, #000 1px, rgba(0,0,0,0) 1px, rgba(0,0,0,0) 100%);
-    background: -moz-linear-gradient(-90deg, #000 1px, rgba(0,0,0,0) 1px, rgba(0,0,0,0) 100%);
-    background: linear-gradient(180deg, #000 1px, rgba(0,0,0,0) 1px, rgba(0,0,0,0) 100%);
-    background-size: 100% 1.7em;
-}
-
 <h2>Kbps to GB/M Converter</h2>
 <p>Enter the Kbps to convert to GB per Month:</p>
 <p>HDMI Camera will be between 1000Kbps and 40000 Kbps</p>
@@ -29,18 +18,23 @@
 <p>GB/h: <span id="outputGBh"></span></p>
 <p>GB/Month: <span id="outputGBm"></span></p>
 
+<hr>
+
 <p>
   <label>Events</label>
   <input id="inputEvents" type="number" placeholder="Event" oninput="Eventscalc(this.value, amount)" onchange="Eventscalc(this.value, amount)">
 </p>
 
-<p>Event based GB/Month: <span id="outputUsage"></span></p>
+
+<p><span id="outputUsage"></span> Minutes events = GB/Month: <span id="outputUsage"></span></p>
 
 
 
 <script>
 
 var amount;
+var mins = 5 ;
+
 
 function Converter(valNum) {
   document.getElementById("outputMbps").innerHTML=valNum/1000;
@@ -51,8 +45,8 @@ function Converter(valNum) {
   amount = (valNum/1000000)/8
 }
 
-  function Eventscalc(events, EA) {
-    document.getElementById("outputUsage").innerHTML=events*(EA*(60*2));
+  function Eventscalc(events, EA, mins) {
+    document.getElementById("outputUsage").innerHTML=events*(EA*(60*mins));
   }
   </script>
 </body>

@@ -11,6 +11,7 @@
   <label>Kbps</label>
   <input id="inputKbps" type="number" placeholder="Kbps" oninput="Converter(this.value)" onchange="Converter(this.value)">
 </p>
+
 <p>Mbps: <span id="outputMbps"></span> </p>
 <p>Gbps: <span id="outputGbps"></span></p>
 <p>GB/s: <span id="outputGBs"></span></p>
@@ -21,6 +22,7 @@
   <label>Events</label>
   <input id="inputEvents" type="number" placeholder="Event" oninput="Eventscalc(this.value, 5)" onchange="Eventscalc(this.value, 5)">
 </p>
+
 <p>Event based GB/Month: <span id="outputUsage"></span></p>
 
 <script>
@@ -35,7 +37,7 @@ function Converter(valNum) {
 </script>
 <script>
   function Eventscalc(events, EA) {
-    document.getElementById("outputUsage").innerHTML=events*(EA(60*2));
+    document.getElementById("outputUsage").innerHTML=events*(EA*(60*2));
   }
   </script>
 </body>

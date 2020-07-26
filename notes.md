@@ -1,6 +1,6 @@
 **Notes**
 
-The mictrack config cable is a prolific usb to serial chip, it should be supported by linux 
+The mictrack config cable is a prolific usb to serial chip, it is supported by linux 
 
 [prolific linux driver discovery](http://programmingknowledgeblog.blogspot.com/2013/12/prolific-usb-to-serial-comm-port-linux.html) copied below
 

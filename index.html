@@ -18,12 +18,15 @@
 <p>GB/h: <span id="outputGBh"></span></p>
 <p>GB/Month: <span id="outputGBm"></span></p>
 
+var amount;
+
 <p>
   <label>Events</label>
   <input id="inputEvents" type="number" placeholder="Event" oninput="Eventscalc(this.value, amount)" onchange="Eventscalc(this.value, amount)">
 </p>
 
 <p>Event based GB/Monthxxx: <span id="outputUsage"></span></p>
+
 
 <script>
 function Converter(valNum) {
@@ -32,7 +35,7 @@ function Converter(valNum) {
   document.getElementById("outputGBs").innerHTML=(valNum/1000000)/8;
   document.getElementById("outputGBh").innerHTML=((valNum/1000000)/8)*3600;
   document.getElementById("outputGBm").innerHTML=(((valNum/1000000)/8)*3600)*730 ;
-  var amount = (valNum/1000000)/8
+  amount = (valNum/1000000)/8
 }
 </script>
 <script>

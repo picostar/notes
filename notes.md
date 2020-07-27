@@ -2,6 +2,9 @@
 
 The mictrack config cable is a prolific usb to serial chip, it is supported by linux 
 
+It should have a label "config" on it, otherwise it has larger than normal USB connector (for the serial chip)
+the regular cables in the mictrack box are only for chargning
+
 [prolific linux driver discovery](http://programmingknowledgeblog.blogspot.com/2013/12/prolific-usb-to-serial-comm-port-linux.html) copied below
 
 Once you have confirmed you have the serial dev available, for me it's /dev/ttyUSB0

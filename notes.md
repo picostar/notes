@@ -18,7 +18,7 @@ send this command to read current configuration, you may need to have your termi
 
 set the apn (ATT example), no username or password
 
-    cmd:iot0119.com.attz,,#
+    cmd:apn,iot0119.com.attz,,#
 
 read config to assure apn was set
 
@@ -58,28 +58,28 @@ off with
 
 mictrack commands
 ```
-Item	Command format	Example
-APN 	cmd:apn,apn, apn user, apn password#	cmd:apn,iot.nb,,#
-cmd:apn,internet,internet,internet#
-IP/Port	cmd:data,IP:Port# 	cmd:data,113.98.254.179:7700#
-Mode 0	cmd:mode,0,T# 	cmd:mode,0,8#       #once a day report 8=8AM (24 hour)
-Mode 1	cmd:mode,1,T# 	cmd:mode,1,10#      #deep sleep interval 10=10 seconds
-Mode 5	cmd:mode,5,T# 	cmd:mode,5,10#      #GPS sleep mode 10=10 seconds
-Mode 6	cmd:mode,6,T# 	cmd:mode,6,10#      #GPS always on 10=10 seconds
-Mode 7	cmd:mode,7,T# 	cmd:mode,7,10#      #power saving mode 10=10 seconds
-GSM Only	cmd:netlock,1,1,2# 	cmd:netlock,1,1,2# 
-Cat M1 Only	cmd:netlock,2,3,0#	cmd:netlock,2,3,0#
+Item	        Command format	        Example                         Note
+APN 	        cmd:apn,apn,un,pw#	cmd:apn,iot.nb,,#
+IP/Port	        cmd:data,IP:Port# 	cmd:data,13.82.224.47,5191#
+Mode 0	        cmd:mode,0,T# 	    cmd:mode,0,8#               once a day report 8=8AM (24 hour)
+Mode 1	        cmd:mode,1,T# 	    cmd:mode,1,10#              deep sleep interval 10=10 seconds
+Mode 5	        cmd:mode,5,T# 	    cmd:mode,5,10#              GPS sleep mode 10=10 seconds
+Mode 6	        cmd:mode,6,T# 	    cmd:mode,6,10#              GPS always on 10=10 seconds
+Mode 7	        cmd:mode,7,T# 	    cmd:mode,7,10#              power saving mode 10=10 seconds
+GSM Only	    cmd:netlock,1,1,2# 	cmd:netlock,1,1,2# 
+Cat M1 Only	    cmd:netlock,2,3,0#	cmd:netlock,2,3,0#
 NB-IoT Only 	cmd:netlock,3,3,1# 	cmd:netlock,3,3,1# 
-AUTO	cmd:netlock,0,0,2# 	cmd:netlock,0,0,2# 
-RESTART	cmd:reboot,0# 	cmd:reboot,0# 
-RESET	cmd:factoryreset,1# 	cmd:factoryreset,1# 
-Log ON	cmd:logprint,1#	cmd:logprint,1#
-Log OFF	cmd:logprint,0#	cmd:logprint,0#
-Read Config	cmd:rconf,1#	cmd:rconf,1#
+AUTO	        cmd:netlock,0,0,2# 	cmd:netlock,0,0,2# 
+RESTART	        cmd:reboot,0# 	    cmd:reboot,0# 
+RESET	        cmd:factoryreset,1# cmd:factoryreset,1# 
+Log ON	        cmd:logprint,1#	    cmd:logprint,1#
+Log OFF	        cmd:logprint,0#	    cmd:logprint,0#
+Read Config	    cmd:rconf,1#	    cmd:rconf,1#
 UDP (No ACK)	cmd:protocol,0,0#	cmd:protocol,0,0#
 UDP (with ACK)	cmd:protocol,0,1#	cmd:protocol,0,1#
 TCP (No ACK)	cmd:protocol,1,0#	cmd:protocol,1,0#
 TCP (with ACK)	cmd:protocol,1,1#	cmd:protocol,1,1#
+
 Check network	AT+QNWINFO	AT+QNWINFO
 ```
 

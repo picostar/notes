@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<title>Kbps to GB per month Converter</title>
+<body>
+
+<h2>Kbps to GB/M Converter</h2>
+<p>Enter the Kbps to convert to GB per Month:</p>
+<p>HDMI Camera will be between 1000Kbps and 4000 Kbps</p>
+
+<p>
+  <label>Kbps</label>
+  <input id="inputKbps" type="number" placeholder="Kbps" oninput="Converter(this.value)" onchange="Converter(this.value)">
+</p>
+
+<p>Mbps: <span id="outputMbps"></span> </p>
+<p>Gbps: <span id="outputGbps"></span></p>
+<p>GB/s: <span id="outputGBs"></span></p>
+<p>GB/h: <span id="outputGBh"></span></p>
+<p>GB/Month: <span id="outputGBm"></span></p>
+
+<hr>
+
+<p>
+  <label>Events per month</label>
+  <input id="inputEvents" type="number" placeholder="Event" oninput="Eventscalc(this.value, amount)" onchange="Eventscalc(this.value, amount)">
+</p>
+
+
+<p> Event based usage  = GB/Month: <span id="outputUsage"></span></p>
+
+<script>
+
+var amount;
+var mins = 5 ;
+
+
+function Converter(valNum) {
+  document.getElementById("outputMbps").innerHTML=valNum/1000;
+  document.getElementById("outputGbps").innerHTML=valNum/1000000;
+  document.getElementById("outputGBs").innerHTML=(valNum/1000000)/8;
+  document.getElementById("outputGBh").innerHTML=((valNum/1000000)/8)*3600;
+  document.getElementById("outputGBm").innerHTML=(((valNum/1000000)/8)*3600)*730 ;
+  amount = (valNum/1000000)/8
+}
+
+  function Eventscalc(events, EA) {
+    document.getElementById("outputUsage").innerHTML=events*(EA*(60*mins));
+  }
+  </script>
+</body>
+</html>
